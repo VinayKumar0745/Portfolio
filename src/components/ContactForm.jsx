@@ -54,7 +54,7 @@ export default function ContactForm() {
 
     setStatus({
       state: 'success',
-      message: `Your default email client has been opened with your inquiry prepared for ${profileData.email}. You can also reach out directly via LinkedIn.`
+      message: `Your default email application has been launched with your message pre-filled. Please review and click Send in your email client to deliver it, or email directly at ${profileData.email}.`
     });
 
     setFormData({ name: '', email: '', subject: '', message: '' });
