@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText } from 'lucide-react';
 import { profileData } from '../data/profile';
 
-export default function Navbar() {
+export default function Navbar({ onOpenResume }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -11,6 +11,14 @@ export default function Navbar() {
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
+  };
+
+  const handleResumeClick = (e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    if (onOpenResume) {
+      onOpenResume();
+    }
   };
 
   // Close menu on Escape key press
@@ -51,32 +59,18 @@ export default function Navbar() {
           <a href="#contributions" className="nav-link" onClick={closeMobileMenu}>Capabilities</a>
           <a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a>
 
-          {profileData.resume?.available ? (
-            <div className="nav-actions">
-              <a 
-                href={profileData.resume.pdfUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="nav-resume-btn"
-                onClick={closeMobileMenu}
-              >
-                <FileText size={15} />
-                <span>{profileData.resume.label || "Resume"}</span>
-              </a>
-            </div>
-          ) : (
-            <div className="nav-actions">
-              <a 
-                href="#contact" 
-                className="nav-resume-btn"
-                onClick={closeMobileMenu}
-                title="Contact directly to request current resume PDF"
-              >
-                <FileText size={15} />
-                <span>Request Resume</span>
-              </a>
-            </div>
-          )}
+          <div className="nav-actions">
+            <button 
+              type="button"
+              className="nav-resume-btn"
+              onClick={handleResumeClick}
+              aria-label="Download tailored 1-page resumes"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit' }}
+            >
+              <FileText size={15} />
+              <span>Resume</span>
+            </button>
+          </div>
         </nav>
       </div>
     </header>

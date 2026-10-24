@@ -1,8 +1,8 @@
 import React from 'react';
-import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Mail, Github, Linkedin, FileText } from 'lucide-react';
 import { profileData } from '../data/profile';
 
-export default function Hero() {
+export default function Hero({ onOpenResume }) {
   return (
     <section id="hero" className="hero-section" aria-label="Hero Introduction">
       <div className="container hero-layout">
@@ -18,6 +18,16 @@ export default function Hero() {
               <span>Explore My Projects</span>
               <ArrowDown size={15} />
             </a>
+
+            <button 
+              type="button" 
+              className="btn btn-secondary"
+              onClick={onOpenResume}
+              aria-label="Download tailored 1-page resumes"
+            >
+              <FileText size={15} />
+              <span>Download Resume</span>
+            </button>
 
             <a href="#contact" className="btn btn-secondary">
               <span>Get In Touch</span>

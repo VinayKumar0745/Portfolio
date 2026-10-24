@@ -10,6 +10,7 @@ import Contributions from './sections/Contributions';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
+import ResumeModal from './components/ResumeModal';
 
 // Styles
 import './styles/variables.css';
@@ -23,6 +24,7 @@ import './styles/contact.css';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   const handleOpenDetails = (project) => {
     setSelectedProject(project);
@@ -34,9 +36,9 @@ export default function App() {
 
   return (
     <div className="portfolio-app">
-      <Navbar />
+      <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
       <main id="main-content">
-        <Hero />
+        <Hero onOpenResume={() => setIsResumeModalOpen(true)} />
         <About />
         <Skills />
         <Projects onOpenDetails={handleOpenDetails} />
@@ -53,6 +55,11 @@ export default function App() {
           onClose={handleCloseDetails} 
         />
       )}
+
+      <ResumeModal 
+        isOpen={isResumeModalOpen} 
+        onClose={() => setIsResumeModalOpen(false)} 
+      />
     </div>
   );
 }

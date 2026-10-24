@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddi Vinay Kumar - Java Full Stack Developer Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      line-height: 1.45;
+      background: #f8fafc;
+      padding: 24px;
+    }
+
+    .resume-container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .contact-info {
+      font-size: 11.5px;
+      color: var(--secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-row .sep {
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .contact-info a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+
+    .summary-text {
+      font-size: 12px;
+      color: var(--secondary);
+      text-align: justify;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 11.5px;
+    }
+
+    .skill-row {
+      display: flex;
+    }
+
+    .skill-category {
+      font-weight: 600;
+      color: var(--primary);
+      min-width: 190px;
+    }
+
+    .skill-items {
+      color: var(--secondary);
+    }
+
+    .experience-header, .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .job-title span {
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .job-meta {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .sub-project-title {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+
+    .sub-project-title span {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+    }
+
+    li {
+      font-size: 11px;
+      color: var(--secondary);
+      margin-bottom: 2.5px;
+      line-height: 1.4;
+    }
+
+    li strong {
+      color: var(--primary);
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .degree {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .institution {
+      font-size: 11.5px;
+      color: var(--secondary);
+    }
+
+    .edu-meta {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .download-bar {
+      max-width: 820px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+
+    .download-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .download-bar-left .badge {
+      background: #eff6ff;
+      color: var(--accent);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .download-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 8mm 12mm 8mm 12mm;
+    }
+
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 9.8pt !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .resume-container {
+        padding: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      header {
+        border-bottom: 2px solid var(--primary) !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 12px !important;
+      }
+
+      h1 {
+        font-size: 20px !important;
+        margin-bottom: 2px !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .title {
+        font-size: 12.5px !important;
+        margin-bottom: 4px !important;
+      }
+
+      .contact-info {
+        font-size: 10.2px !important;
+        gap: 2.5px !important;
+      }
+
+      .contact-row {
+        gap: 8px !important;
+      }
+
+      section {
+        margin-bottom: 11px !important;
+      }
+
+      h2 {
+        font-size: 11.5px !important;
+        padding-bottom: 2.5px !important;
+        margin-bottom: 5px !important;
+        letter-spacing: 0.6px !important;
+      }
+
+      .summary-text {
+        font-size: 10.2px !important;
+        line-height: 1.42 !important;
+      }
+
+      .skills-grid {
+        gap: 3.5px !important;
+        font-size: 10.2px !important;
+      }
+
+      .skill-category {
+        min-width: 170px !important;
+      }
+
+      .experience-header, .project-header {
+        margin-top: 5px !important;
+        margin-bottom: 2px !important;
+      }
+
+      .job-title {
+        font-size: 11.5px !important;
+      }
+
+      .job-meta {
+        font-size: 10.2px !important;
+      }
+
+      .sub-project-title {
+        font-size: 10.5px !important;
+        margin-top: 3.5px !important;
+        margin-bottom: 2px !important;
+      }
+
+      ul {
+        margin-left: 17px !important;
+        margin-top: 2px !important;
+        margin-bottom: 5px !important;
+      }
+
+      li {
+        font-size: 9.9px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 2.2px !important;
+      }
+
+      .education-item {
+        margin-top: 3px !important;
+      }
+
+      .degree {
+        font-size: 11.2px !important;
+      }
+
+      .institution, .edu-meta {
+        font-size: 10px !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="no-print download-bar">
+  <div class="download-bar-left">
+    <span class="badge">1-Page ATS Resume</span>
+    <span>Click the button to save as a clean single-page PDF</span>
+  </div>
+  <button onclick="window.print()" class="download-btn">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Save as 1-Page PDF / Print
+  </button>
+</div>
+
+<div class="resume-container">
+  <header>
+    <h1>REDDI VINAY KUMAR</h1>
+    <div class="title">Java Full Stack Developer | Spring Boot &amp; React.js</div>
+    <div class="contact-info">
+      <div class="contact-row">
+        <span>+91 8639466689</span>
+        <span class="sep">|</span>
+        <a href="mailto:vinaykumarreddi07@gmail.com">vinaykumarreddi07@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/vinay-kumar-reddi" target="_blank">linkedin.com/in/vinay-kumar-reddi</a></span>
+        <span class="sep">|</span>
+        <span>GitHub: <a href="https://github.com/VinayKumar0745" target="_blank">github.com/VinayKumar0745</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary-text">
+      Java Full Stack Developer with a Bachelor of Technology in Computer Science and Engineering (Artificial Intelligence and Machine Learning) from Vellore Institute of Technology, Andhra Pradesh (VIT-AP) and corporate software engineering experience at Abhishyandh Global Solutions. Proficient in multi-tier architecture combining <strong>Java (JDK 17)</strong>, <strong>Spring Boot 3</strong>, <strong>Spring Data JPA</strong>, and <strong>MySQL</strong> on the backend with <strong>React.js (v18)</strong>, modern <strong>JavaScript</strong>, <strong>HTML5</strong>, and <strong>CSS3</strong> on the frontend. Demonstrated expertise in developing RESTful APIs, implementing JSON Web Token (JWT) security with Role-Based Access Control (RBAC), architecting relational database schemas, and building responsive client-side user interfaces.
+    </p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-category">Backend Technologies:</span>
+        <span class="skill-items">Java (JDK 8 / 11 / 17), Spring Boot 3, Spring Data JPA, Hibernate ORM, Spring MVC, Servlets, JavaServer Pages (JSP), Java Database Connectivity (JDBC), RESTful APIs, Maven</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Frontend Technologies:</span>
+        <span class="skill-items">React.js (v18), JavaScript (ECMAScript 6+), HTML5, CSS3, Vite, React Router DOM, Context API, Lucide React</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Databases &amp; Persistence:</span>
+        <span class="skill-items">MySQL 8.0, Relational Database Modeling, SQL, HikariCP Connection Pooling, Schema Optimization</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Security &amp; Architecture:</span>
+        <span class="skill-items">JSON Web Tokens (JWT), Role-Based Access Control (RBAC), HTTP Interceptors, Model-View-Controller (MVC), Data Access Object (DAO)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Integration &amp; Communication:</span>
+        <span class="skill-items">JavaMailSender, MIME HTML Email Templates, Axios, REST Client Integration, Multipart File Uploads</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Developer Tools:</span>
+        <span class="skill-items">Git, GitHub, Postman, Eclipse IDE, VS Code, Apache Tomcat, npm</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="experience-header">
+      <div class="job-title">Abhishyandh Global Solutions <span>— Associate Developer</span></div>
+      <div class="job-meta">August 2026 – Present | Andhra Pradesh, India</div>
+    </div>
+
+    <div class="sub-project-title">Project: Hospital Care Web Portal <span>(React.js 18, Vite, Modern CSS3)</span></div>
+    <ul>
+      <li>Developed a responsive healthcare portal presenting department listings, key operational statistics, doctor directories, and patient resources.</li>
+      <li>Implemented accessible doctor profile modal dialogs with keyboard navigation (<code>Escape</code> dismissal), background scroll locking, and ARIA attributes.</li>
+      <li>Created a controlled appointment booking interface with client-side form validation and local storage persistence.</li>
+    </ul>
+
+    <div class="sub-project-title">Project: Minutes of Meeting (MoM) Management Platform <span>(Spring Boot 3, Java 17, React.js 18, MySQL, JPA/Hibernate, REST APIs)</span></div>
+    <ul>
+      <li>Developed full-stack capabilities for an enterprise governance platform, connecting a React.js single-page frontend to a Spring Boot REST API.</li>
+      <li>Implemented RESTful controllers and service layer business logic for meeting lifecycles, managing draft persistence, validations, and final submissions.</li>
+      <li>Configured <strong>Spring Data JPA</strong> and <strong>Hibernate ORM</strong> mappings with MySQL, managing relational entities (<code>Mom</code>, <code>MomEntry</code>, <code>Employee</code>) with cascading persistence.</li>
+      <li>Built a custom <strong>JWT authentication interceptor</strong> and <code>CurrentUserResolver</code> in Spring Boot to validate bearer tokens and enforce Role-Based Access Control (RBAC).</li>
+      <li>Engineered a collaborative temporary edit session workflow allowing designated coordinators to request time-bounded access to locked records with approval gates.</li>
+      <li>Integrated <strong>JavaMailSender</strong> with dynamic HTML templates to dispatch meeting notifications, featuring an environment toggle to safely simulate dispatch during testing.</li>
+      <li>Constructed responsive React.js user interfaces utilizing Axios, Context API, and modular modal components for meeting configuration and record review.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Personal Projects</h2>
+    <div class="project-header">
+      <div class="job-title">Food Delivery Web Application <span>— Personal Project</span></div>
+      <div class="job-meta">Java, Servlets, JSP, JDBC, MySQL, HTML5, CSS3, JavaScript, Apache Tomcat</div>
+    </div>
+    <div class="sub-project-title">Repository: <a href="https://github.com/VinayKumar0745/FoodDelivery" target="_blank" style="color: var(--accent);">github.com/VinayKumar0745/FoodDelivery</a></div>
+    <ul>
+      <li>Engineered a full-stack food delivery web application utilizing the <strong>Model-View-Controller (MVC)</strong> and <strong>Data Access Object (DAO)</strong> architectural patterns.</li>
+      <li>Built server-rendered dynamic web pages using <strong>JSP</strong>, <strong>HTML5</strong>, and modern <strong>CSS3</strong> featuring responsive restaurant cards, categorized menus, and checkout forms.</li>
+      <li>Implemented controller servlets (<code>RestaurantServlet</code>, <code>MenuServlet</code>, <code>CartServlet</code>, <code>CheckOutServlet</code>, <code>LoginUserServlet</code>) to process client requests and route responses.</li>
+      <li>Designed and executed relational database operations in <strong>MySQL</strong> via <strong>JDBC</strong> and <code>PreparedStatement</code> interfaces across users, restaurants, menu items, orders, and addresses.</li>
+      <li>Managed session-based shopping cart workflows with Java <code>HttpSession</code>, enabling real-time cart item addition, quantity updates, and transactional checkout persistence.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education-item">
+      <div>
+        <div class="degree">Bachelor of Technology (B.Tech) in Computer Science and Engineering</div>
+        <div class="institution">Vellore Institute of Technology, Andhra Pradesh (VIT-AP) &bull; Specialization: Artificial Intelligence & Machine Learning</div>
+      </div>
+      <div class="edu-meta">
+        <div>Graduation: 2025</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
